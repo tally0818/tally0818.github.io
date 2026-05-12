@@ -25,7 +25,6 @@ Recently, my work has focused on exploration in LLM reinforcement learning.
 |------|-|
 | May 2026 | NudgeRL is out! 🎉|
 | May 2026 | SAGE got accepted at ICML 2026! 🎉|
-| Dec 2025 | I came back from my mandatory military service at ROK Air Force! 🪖|
 
 ---
 
@@ -35,3 +34,20 @@ Recently, my work has focused on exploration in LLM reinforcement learning.
 Author 1, **Chanuk Lee**, Author 3  
 *arXiv*, 2026  
 \[[Paper](#)\] \[[Code](#)\] 
+
+---
+
+## Experience
+
+| | |
+|--|--|
+| Oct. 2025 - Present | **[Company Name]** — *[Role]* |
+
+---
+
+## Education
+
+| | |
+|--|--|
+| Mar. 2022 – Present | **KAIST**, School of Computing — B.S. in Computer Science *(Expected 2028)* <br> *(2 years absent for mandatory military service at ROK Air Force, 2024–2025)* |
+| Mar. 2020 – Feb. 2022 | **Hansung Science High School** — Early Graduation *(2 years)* |
