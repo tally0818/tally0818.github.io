@@ -23,9 +23,9 @@ Recently, my work has focused on exploration in LLM reinforcement learning.
 
 | Date | |
 |------|-|
-| May 2026 | 🎉 NudgeRL is out! |
-| May 2026 | 🎉 SAGE got accepted at ICML 2026!|
-| Dec 2025 | 🪖 I came back from my mandatory military service at ROK Air Force!|
+| May 2026 | NudgeRL is out! 🎉|
+| May 2026 | SAGE got accepted at ICML 2026! 🎉|
+| Dec 2025 | I came back from my mandatory military service at ROK Air Force! 🪖|
 
 ---
 
@@ -33,5 +33,5 @@ Recently, my work has focused on exploration in LLM reinforcement learning.
 
 **Paper Title Here**  
 Author 1, **Chanuk Lee**, Author 3  
-*Conference / Journal*, Year  
-\[[PDF](#)\] \[[Code](#)\] \[[arXiv](#)\]
+*arXiv*, 2026  
+\[[Paper](#)\] \[[Code](#)\] 
