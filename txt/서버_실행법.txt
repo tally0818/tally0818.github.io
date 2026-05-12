@@ -1,0 +1,24 @@
+로컬 미리보기 서버 실행/종료
+================================
+
+[ 서버 시작 ]
+터미널에서 프로젝트 폴더로 이동 후:
+
+  export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+  bundle exec jekyll serve --livereload
+
+브라우저에서 http://localhost:4000 접속
+(파일 수정하면 자동으로 새로고침됨)
+
+
+[ 서버 종료 ]
+서버 실행 중인 터미널에서:  Ctrl + C
+
+또는 다른 터미널에서:
+  kill $(lsof -ti:4000)
+
+
+[ 참고 ]
+- 처음 한 번만: bundle install  (의존성 설치)
+- PATH export는 터미널 새로 열 때마다 필요
+  (~/.zshrc에 이미 추가되어 있으므로 터미널 재시작하면 자동 적용)
