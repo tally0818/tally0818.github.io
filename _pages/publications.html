@@ -5,32 +5,86 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+.pub-section h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  font-size: 1.3em;
+}
+.pub-section hr {
+  margin-bottom: 1.2em;
+}
+.pub-entry {
+  margin-bottom: 1.6em;
+}
+.pub-title {
+  font-weight: bold;
+  font-size: 1.05em;
+}
+.pub-links {
+  margin: 0.2em 0;
+}
+.pub-links a {
+  display: inline-block;
+  margin-right: 0.4em;
+  font-size: 0.88em;
+  padding: 1px 7px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #555;
+}
+.pub-links a:hover {
+  background: #f0f0f0;
+}
+.pub-authors {
+  font-size: 0.95em;
+  margin: 0.15em 0;
+}
+.pub-authors strong {
+  font-weight: bold;
+}
+.pub-venue {
+  font-size: 0.92em;
+  color: #555;
+  font-style: italic;
+}
+</style>
 
-{% include base_path %}
+<div class="pub-section">
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  <h2>Conference Papers</h2>
+  <hr/>
 
+  <!-- =====================================================
+       논문 추가 방법:
+       아래 블록을 복사해서 붙여넣고 내용을 수정하세요.
+       href="#" 부분에 실제 링크를 넣으면 됩니다.
+       링크가 없으면 해당 <a> 태그를 지우세요.
+       ===================================================== -->
 
+  <div class="pub-entry">
+    <div class="pub-title">Paper Title Here</div>
+    <div class="pub-links">
+      <a href="#">project</a>
+      <a href="#">paper</a>
+      <a href="#">code</a>
+    </div>
+    <div class="pub-authors">Author One, <strong>Chanuk Lee</strong>, Author Three</div>
+    <div class="pub-venue">Conference Name (CONF), 2026</div>
+  </div>
 
+  <h2>Preprints</h2>
+  <hr/>
+
+  <div class="pub-entry">
+    <div class="pub-title">Preprint Title Here</div>
+    <div class="pub-links">
+      <a href="#">arXiv</a>
+      <a href="#">code</a>
+    </div>
+    <div class="pub-authors">Author One, <strong>Chanuk Lee</strong>, Author Three</div>
+    <div class="pub-venue">arXiv, 2026</div>
+  </div>
+
+</div>
