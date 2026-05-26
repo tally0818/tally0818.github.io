@@ -13,7 +13,7 @@ I'm currently advised by Prof. [Sung Ju Hwang](http://www.sungjuhwang.com) at th
 
 My research interests primarily lie in LLM post-training, including RLVR and distillation, but I am broadly interested in efficient and scalable learning for language models.
 
-Recently, my work has focused on exploration in LLM reinforcement learning.
+Recently, my work has focused on exploration in LLM reinforcement learning. Here is my [CV](/files/ChanukLeeCV.pdf).
 
 ---
 
