@@ -22,7 +22,7 @@ Recently, my work has focused on exploration in LLM reinforcement learning.
 | Date | |
 |------|-|
 | May 2026 | 🎉 [NudgeRL](https://arxiv.org/abs/2605.15726) is out! |
-| May 2026 | 🎉 [SAGE](https://arxiv.org/pdf/2605.18864) got accepted at ICML 2026 🇰🇷 ! |
+| May 2026 | 🎉 [SAGE](https://arxiv.org/pdf/2605.18864) got accepted at ICML 2026 🇰🇷! |
 
 ---
 
