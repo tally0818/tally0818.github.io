@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 Hi, I'm **Chanuk Lee**, a junior undergraduate student at [KAIST School of Computing](https://cs.kaist.ac.kr), currently advised by Prof. [Sung Ju Hwang](http://www.sungjuhwang.com) at the KAIST [MLAI Lab](https://www.mlai-kaist.com).
+{: .lede}
 
 My research interests primarily lie in LLM post-training, including RLVR and distillation, but I am broadly interested in efficient and scalable learning for language models. Recently, my work has focused on exploration in LLM reinforcement learning.
 
@@ -33,7 +34,7 @@ Here is my [CV](/files/ChanukLeeCV.pdf).
 <div class="pub-entry">
   <div class="pub-title">Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR</div>
   <div class="pub-authors"><strong>Chanuk Lee</strong>*, Sangwoo Park*, Minki Kang, Sung Ju Hwang</div>
-  <div class="pub-venue">arXiv preprint, 2026</div>
+  <div class="pub-venue"><span class="venue-badge venue-badge--preprint">arXiv 2026</span></div>
   <div class="pub-links">
     <a href="https://arxiv.org/pdf/2605.15726">paper</a>
     <a href="https://github.com/tally0818/NudgeRL">code</a>
@@ -43,7 +44,7 @@ Here is my [CV](/files/ChanukLeeCV.pdf).
 <div class="pub-entry">
   <div class="pub-title">SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs</div>
   <div class="pub-authors"><strong>Chanuk Lee</strong>, Minki Kang, Sung Ju Hwang</div>
-  <div class="pub-venue">ICML, 2026</div>
+  <div class="pub-venue"><span class="venue-badge">ICML 2026</span></div>
   <div class="pub-links">
     <a href="https://arxiv.org/pdf/2605.18864">paper</a>
     <a href="https://github.com/tally0818/SAGE">code</a>
