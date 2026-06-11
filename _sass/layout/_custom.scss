@@ -192,6 +192,28 @@ h1, h2, h3, h4,
     flex-basis: 11.5em;
   }
 
+  /* Scrolls only once the list outgrows ~6 items */
+  &.dated-list--scroll {
+    max-height: 15em;
+    overflow-y: auto;
+    padding-right: 0.8em;
+    scrollbar-width: thin;
+    scrollbar-color: var(--global-border-color) transparent;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--global-border-color);
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
   @media (max-width: 600px) {
     li {
       display: block;

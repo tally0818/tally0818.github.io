@@ -16,7 +16,7 @@ Here is my [CV](/files/ChanukLeeCV.pdf).
 
 ## News
 
-<ul class="dated-list">
+<ul class="dated-list dated-list--scroll">
   <li>
     <span class="date">May 2026</span>
     <span class="entry"><a href="https://arxiv.org/abs/2605.15726">NudgeRL</a> is now on arXiv.</span>
