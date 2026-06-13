@@ -1,7 +1,7 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 <script>
-  // BibTeX one-click copy for publication entries.
+  /* BibTeX one-click copy for publication entries. */
   document.addEventListener("click", function (event) {
     var btn = event.target.closest(".cite-btn");
     if (!btn) return;
@@ -47,7 +47,7 @@
       /* no-op */
     }
     document.body.removeChild(ta);
-    // Always confirm to the user, even if the copy command was blocked.
+    /* Always confirm to the user, even if the copy command was blocked. */
     onDone();
   }
 </script>
