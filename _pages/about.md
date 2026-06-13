@@ -38,7 +38,14 @@ Here is my [CV](/files/ChanukLeeCV.pdf).
   <div class="pub-links">
     <a href="https://arxiv.org/pdf/2605.15726">paper</a>
     <a href="https://github.com/tally0818/NudgeRL">code</a>
+    <button type="button" class="cite-btn">BibTeX</button>
   </div>
+  <pre class="pub-bibtex" hidden>@article{lee2026nudging,
+  title   = {Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR},
+  author  = {Lee, Chanuk and Park, Sangwoo and Kang, Minki and Hwang, Sung Ju},
+  journal = {arXiv preprint arXiv:2605.15726},
+  year    = {2026}
+}</pre>
 </div>
 
 <div class="pub-entry">
@@ -48,7 +55,14 @@ Here is my [CV](/files/ChanukLeeCV.pdf).
   <div class="pub-links">
     <a href="https://arxiv.org/pdf/2605.18864">paper</a>
     <a href="https://github.com/tally0818/SAGE">code</a>
+    <button type="button" class="cite-btn">BibTeX</button>
   </div>
+  <pre class="pub-bibtex" hidden>@inproceedings{lee2026sage,
+  title     = {SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs},
+  author    = {Lee, Chanuk and Kang, Minki and Hwang, Sung Ju},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026}
+}</pre>
 </div>
 
 <p class="more-link"><a href="/publications/">Full publication list →</a></p>

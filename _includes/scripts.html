@@ -1,5 +1,56 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  // BibTeX one-click copy for publication entries.
+  document.addEventListener("click", function (event) {
+    var btn = event.target.closest(".cite-btn");
+    if (!btn) return;
+
+    var entry = btn.closest(".pub-entry");
+    var source = entry && entry.querySelector(".pub-bibtex");
+    if (!source) return;
+
+    var bibtex = source.textContent.trim();
+
+    var done = function () {
+      var original = btn.dataset.label || btn.textContent;
+      btn.dataset.label = original;
+      btn.textContent = "copied!";
+      btn.classList.add("is-copied");
+      window.clearTimeout(btn._resetTimer);
+      btn._resetTimer = window.setTimeout(function () {
+        btn.textContent = original;
+        btn.classList.remove("is-copied");
+      }, 1600);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(bibtex).then(done, function () {
+        fallbackCopy(bibtex, done);
+      });
+    } else {
+      fallbackCopy(bibtex, done);
+    }
+  });
+
+  function fallbackCopy(text, onDone) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "absolute";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      onDone();
+    } catch (e) {
+      /* no-op */
+    }
+    document.body.removeChild(ta);
+  }
+</script>
+
 {% include analytics.html %}
 
 {% include comments-providers/scripts.html %}

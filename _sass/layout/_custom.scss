@@ -306,7 +306,8 @@ h1, h2, h3, h4,
 .pub-links {
   margin-top: 0.55em;
 
-  a {
+  a,
+  .cite-btn {
     display: inline-block;
     margin-right: 0.4em;
     font-size: 0.78em;
@@ -326,10 +327,30 @@ h1, h2, h3, h4,
       border-color: var(--site-accent);
     }
   }
+
+  .cite-btn {
+    font-family: inherit;
+    line-height: inherit;
+    background: transparent;
+    cursor: pointer;
+
+    &.is-copied,
+    &.is-copied:hover {
+      color: #fff;
+      background: var(--site-accent);
+      border-color: var(--site-accent);
+    }
+  }
 }
 
-html[data-theme="dark"] .pub-links a:hover {
+html[data-theme="dark"] .pub-links a:hover,
+html[data-theme="dark"] .pub-links .cite-btn:hover,
+html[data-theme="dark"] .pub-links .cite-btn.is-copied {
   color: #10181b;
+}
+
+.pub-bibtex {
+  display: none;
 }
 
 .more-link {
