@@ -43,11 +43,12 @@
     ta.select();
     try {
       document.execCommand("copy");
-      onDone();
     } catch (e) {
       /* no-op */
     }
     document.body.removeChild(ta);
+    // Always confirm to the user, even if the copy command was blocked.
+    onDone();
   }
 </script>
 
