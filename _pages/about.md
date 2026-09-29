@@ -31,6 +31,7 @@ redirect_from:
 <section class="news-strip" aria-labelledby="news-heading">
   <h2 id="news-heading">News</h2>
   <ul>
+    <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/pdf/2609.34327">FlyBy</a> and <a href="https://arxiv.org/pdf/2609.33781">EAPO</a> are now on arXiv.</span></li>
     <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/pdf/2605.15726">NudgeRL</a> has been accepted to the <strong>MATH-AI@NeurIPS 2026</strong> workshop! <span aria-label="celebration">🎉</span></span></li>
     <li><time datetime="2026-05">May 2026</time><span><a href="https://arxiv.org/pdf/2605.15726">NudgeRL</a> is now on arXiv.</span></li>
     <li><time datetime="2026-05">May 2026</time><span><a href="https://arxiv.org/pdf/2605.18864">SAGE</a> has been accepted to <strong>ICML 2026</strong>! <span aria-label="celebration">🎉</span></span></li>
