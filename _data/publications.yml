@@ -1,0 +1,80 @@
+# Keep newest submissions first. Copy this draft entry when adding a pending paper.
+# - id: unique-paper-id
+#   title: "Paper title"
+#   authors: "Authors in order"
+#   venue: arXiv
+#   year: 2026
+#   category: preprint
+#   status: "Submitted to arXiv; announcement pending"
+# Add paper, code, and bibtex fields when available.
+
+- id: knowing-when-thinking-is-not-enough
+  selected: true
+  title: "Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge"
+  authors: "<strong>Chanuk Lee</strong>, Minki Kang, Sangwoo Park, Woongyeong Yeo, Jinheon Baek†, Sung Ju Hwang†"
+  authors_note: "† Equal advising"
+  venue: arXiv
+  year: 2026
+  category: preprint
+  paper: https://arxiv.org/pdf/2609.34327
+  code: https://github.com/tally0818/FlyBy
+  bibtex: |
+    @misc{lee2026knowingthinkingenoughteaching,
+      title={Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge},
+      author={Chanuk Lee and Minki Kang and Sangwoo Park and Woongyeong Yeo and Jinheon Baek and Sung Ju Hwang},
+      year={2026},
+      eprint={2609.34327},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2609.34327}
+    }
+- id: surprising-success-repeated-failure
+  title: "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning"
+  authors: "Woongyeong Yeo, Minki Kang, <strong>Chanuk Lee</strong>, Sangwoo Park, Jinheon Baek†, Sung Ju Hwang†"
+  authors_note: "† Corresponding authors"
+  venue: arXiv
+  year: 2026
+  category: preprint
+  paper: https://arxiv.org/pdf/2609.33781
+  code: https://github.com/wgcyeo/EAPO
+  bibtex: |
+    @misc{yeo2026surprisingsuccessrepeatedfailure,
+      title={Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning},
+      author={Woongyeong Yeo and Minki Kang and Chanuk Lee and Sangwoo Park and Jinheon Baek and Sung Ju Hwang},
+      year={2026},
+      eprint={2609.33781},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2609.33781}
+    }
+- id: nudgerl
+  selected: true
+  title: "Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR"
+  authors: "<strong>Chanuk Lee</strong>*, Sangwoo Park*, Minki Kang, Sung Ju Hwang"
+  venue: MATH-AI@NeurIPS
+  year: 2026
+  category: workshop
+  paper: https://arxiv.org/pdf/2605.15726
+  code: https://github.com/tally0818/NudgeRL
+  bibtex: |
+    @article{lee2026nudging,
+      title={Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR},
+      author={Lee, Chanuk and Park, Sangwoo and Kang, Minki and Hwang, Sung Ju},
+      journal={arXiv preprint arXiv:2605.15726},
+      year={2026}
+    }
+- id: sage
+  title: "SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs"
+  authors: "<strong>Chanuk Lee</strong>, Minki Kang, Sung Ju Hwang"
+  venue: ICML
+  year: 2026
+  category: conference
+  paper: https://arxiv.org/pdf/2605.18864
+  code: https://github.com/tally0818/SAGE
+  bibtex: |
+    @article{lee2026sage,
+      title={SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs},
+      author={Lee, Chanuk and Kang, Minki and Hwang, Sung Ju},
+      journal={arXiv preprint arXiv:2605.18864},
+      year={2026}
+    }

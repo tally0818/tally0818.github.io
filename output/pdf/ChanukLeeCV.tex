@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+
+% Compile with pdfLaTeX, XeLaTeX, or Tectonic.
+% Content aligned with _pages/about.md, _data/publications.yml, and _config.yml.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=2cm,bottom=2cm,left=2.1cm,right=2.1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+\usepackage[unicode]{hyperref}
+
+\definecolor{linkcolour}{rgb}{0,0,0}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolour,
+  linkcolor=linkcolour,
+  pdftitle={Chanuk Lee -- Curriculum Vitae},
+  pdfauthor={Chanuk Lee}
+}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\tabcolsep}{0pt}
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{3.8cm}}
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\linewidth}{@{}LR@{}}\textbf{#1} & #2\end{tabularx}%
+}
+\newcommand{\equal}{\textsuperscript{*}}
+\newcommand{\advising}{\textsuperscript{\dag}}
+\newcommand{\corresponding}{\textsuperscript{\dag}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Chanuk Lee}\\[6pt]
+  \small
+  \href{https://tally0818.github.io}{\faHome\ Website}
+  \enspace$\diamond$\enspace
+  \href{mailto:tallyforce@kaist.ac.kr}{\faEnvelope\ tallyforce@kaist.ac.kr}
+  \enspace$\diamond$\enspace
+  \href{https://github.com/tally0818}{\faGithub\ GitHub}
+  \enspace$\diamond$\enspace
+  \href{https://scholar.google.com/citations?user=bygrV1UAAAAJ\&hl=en}{\faGraduationCap\ Google Scholar}
+  \enspace$\diamond$\enspace
+  \href{https://www.linkedin.com/in/chanuk-lee-203554398}{\faLinkedin\ LinkedIn}
+\end{center}
+\vspace{-9pt}
+
+\section{Research Interests}
+
+I study how to build intelligent systems that make effective use of limited resources:
+improving reasoning while reducing computation and supervision during post-training,
+and enabling models to recognize their limitations and selectively use external resources
+at inference time. My interests include efficient LLM post-training, reinforcement learning
+with verifiable rewards (RLVR), test-time scaling, tool-augmented reasoning, and
+self-improving agents that learn through interaction.
+
+\section{Education}
+
+\entry{Korea Advanced Institute of Science and Technology (KAIST)}{Mar.~2022 -- Present}
+B.S. in Computer Science; Minor in Mathematics \hfill Expected graduation: 2028\\
+{\small Mandatory military service: Republic of Korea Air Force, 2024--2025.}
+
+\entry{Hansung Science High School}{Mar.~2020 -- Feb.~2022}
+Early graduation in two years.
+
+\section{Research Experience}
+
+\entry{KAIST MLAI Lab}{Oct.~2025 -- Present}
+Undergraduate Research Intern \hfill Advisor: Prof.~\href{http://www.sungjuhwang.com}{Sung Ju Hwang}\\
+Research on LLM reasoning and post-training.
+
+\section{Publications and Preprints}
+
+\begin{enumerate}[leftmargin=1.8em,label={[\arabic*]},itemsep=6pt,topsep=2pt,parsep=0pt]
+  \raggedright
+  \item[{[4]}]
+  \textbf{Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to
+  Reason Beyond Their Parametric Knowledge}\\
+  \textbf{Chanuk Lee}, Minki Kang, Sangwoo Park, Woongyeong Yeo,
+  Jinheon Baek\advising, Sung Ju Hwang\advising\\
+  \textit{arXiv preprint, 2026.}
+  \href{https://arxiv.org/abs/2609.34327}{[Paper]}
+  \href{https://github.com/tally0818/FlyBy}{[Code]}
+
+  \item[{[3]}]
+  \textbf{Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment
+  for Exploration in LLM Reasoning}\\
+  Woongyeong Yeo, Minki Kang, \textbf{Chanuk Lee}, Sangwoo Park,
+  Jinheon Baek\corresponding, Sung Ju Hwang\corresponding\\
+  \textit{arXiv preprint, 2026.}
+  \href{https://arxiv.org/abs/2609.33781}{[Paper]}
+  \href{https://github.com/wgcyeo/EAPO}{[Code]}
+
+  \item[{[2]}]
+  \textbf{Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration
+  for RLVR}\\
+  \textbf{Chanuk Lee}\equal, Sangwoo Park\equal, Minki Kang, Sung Ju Hwang\\
+  \textit{MATH-AI@NeurIPS 2026 Workshop.}
+  \href{https://arxiv.org/abs/2605.15726}{[Paper]}
+  \href{https://github.com/tally0818/NudgeRL}{[Code]}
+
+  \item[{[1]}]
+  \textbf{SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs}\\
+  \textbf{Chanuk Lee}, Minki Kang, Sung Ju Hwang\\
+  \textit{International Conference on Machine Learning (ICML), 2026.}
+  \href{https://arxiv.org/abs/2605.18864}{[Paper]}
+  \href{https://github.com/tally0818/SAGE}{[Code]}
+
+\end{enumerate}
+{\footnotesize \equal\ Equal contribution\quad
+\advising\ Equal advising / Corresponding authors}
+
+\section{Academic Service}
+
+\textbf{Reviewer:} MATH-AI@NeurIPS 2026 Workshop.
+
+\section{Technical Skills}
+
+% Skills and languages retained from the supplied CV.
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.3cm}L@{}}
+  Programming & Python; PyTorch\\
+  LLM Ecosystem & Transformers, PEFT, TRL, verl, vLLM\\
+  Tools & Weights \& Biases, Git, Linux, \LaTeX\\
+  Languages & Korean, English
+\end{tabularx}
+
+\vfill
+\begin{center}
+  \footnotesize Last updated: September 29, 2026
+\end{center}
+
+\end{document}

@@ -1,0 +1,26 @@
+{% assign paper = include.paper %}
+{% assign has_links = false %}
+{% if paper.paper and paper.paper != empty %}{% assign has_links = true %}{% endif %}
+{% if paper.code and paper.code != empty %}{% assign has_links = true %}{% endif %}
+{% if paper.bibtex and paper.bibtex != empty %}{% assign has_links = true %}{% endif %}
+<article class="research-paper pub-entry" id="paper-{{ paper.id | escape }}">
+  <div class="paper-meta"><span class="paper-venue{% if paper.category == 'conference' %} paper-venue--conference{% endif %}">{{ paper.venue }}</span><span class="paper-year">{{ paper.year }}</span></div>
+  <div class="paper-body">
+    <h3 class="paper-title">{% if include.number %}[{{ include.number }}] {% endif %}{% if paper.paper and paper.paper != empty %}<a href="{{ paper.paper }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
+    {% if paper.authors and paper.authors != empty %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}
+    {% if paper.status %}<p class="paper-status">{{ paper.status }}</p>{% endif %}
+    {% if has_links %}
+    <div class="paper-links">
+      {% if paper.paper and paper.paper != empty %}<a href="{{ paper.paper }}">Paper</a>{% endif %}
+      {% if paper.code and paper.code != empty %}<a href="{{ paper.code }}">Code</a>{% endif %}
+      {% if paper.bibtex and paper.bibtex != empty %}
+      <button class="cite-btn" type="button" aria-label="Copy BibTeX for {{ paper.title | escape }}" aria-describedby="cite-status-{{ paper.id }}">BibTeX</button>
+      <span class="cite-status" id="cite-status-{{ paper.id }}" role="status"></span>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if paper.bibtex and paper.bibtex != empty %}
+    <pre class="pub-bibtex" tabindex="0" hidden>{{ paper.bibtex | escape }}</pre>
+    {% endif %}
+  </div>
+</article>

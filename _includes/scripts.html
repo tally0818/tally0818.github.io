@@ -1,6 +1,13 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 <script>
+  document.querySelector('#theme-toggle a').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.click();
+    }
+  });
+
   /* BibTeX one-click copy for publication entries. */
   document.addEventListener("click", function (event) {
     var btn = event.target.closest(".cite-btn");
@@ -11,6 +18,14 @@
     if (!source) return;
 
     var bibtex = source.textContent.trim();
+    btn.dataset.label = btn.dataset.label || btn.textContent;
+    btn.setAttribute('aria-live', 'polite');
+    var failed = function () {
+      source.hidden = false;
+      source.setAttribute('tabindex', '0');
+      source.focus();
+      btn.textContent = 'Select citation below';
+    };
 
     var done = function () {
       var original = btn.dataset.label || btn.textContent;
@@ -26,14 +41,14 @@
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(bibtex).then(done, function () {
-        fallbackCopy(bibtex, done);
+        fallbackCopy(bibtex, done, failed);
       });
     } else {
-      fallbackCopy(bibtex, done);
+      fallbackCopy(bibtex, done, failed);
     }
   });
 
-  function fallbackCopy(text, onDone) {
+  function fallbackCopy(text, onDone, onFailure) {
     var ta = document.createElement("textarea");
     ta.value = text;
     ta.setAttribute("readonly", "");
@@ -41,14 +56,15 @@
     ta.style.left = "-9999px";
     document.body.appendChild(ta);
     ta.select();
+    var copied = false;
     try {
-      document.execCommand("copy");
+      copied = document.execCommand("copy");
     } catch (e) {
       /* no-op */
     }
     document.body.removeChild(ta);
-    /* Always confirm to the user, even if the copy command was blocked. */
-    onDone();
+    if (copied) onDone();
+    else onFailure();
   }
 </script>
 

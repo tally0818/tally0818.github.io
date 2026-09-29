@@ -1,96 +1,66 @@
 ---
+layout: editorial
 permalink: /
-title: "About Me"
-author_profile: true
-redirect_from: 
+title: "About"
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-Hi, I'm **Chanuk Lee**, a junior undergraduate student at [KAIST School of Computing](https://cs.kaist.ac.kr), currently advised by Prof. [Sung Ju Hwang](http://www.sungjuhwang.com) at the KAIST [MLAI Lab](https://www.mlai-kaist.com).
-{: .lede}
-
-My research interests primarily lie in LLM post-training, including RLVR and distillation, but I am broadly interested in efficient and scalable learning for language models. Recently, my work has focused on exploration in LLM reinforcement learning.
-
-Here is my [CV](/files/ChanukLeeCV.pdf).
-
-## News
-
-<ul class="dated-list dated-list--scroll">
-  <li>
-    <span class="date">May 2026</span>
-    <span class="entry"><a href="https://arxiv.org/abs/2605.15726">NudgeRL</a> is now on arXiv.</span>
-  </li>
-  <li>
-    <span class="date">May 2026</span>
-    <span class="entry"><a href="https://arxiv.org/pdf/2605.18864">SAGE</a> has been accepted to ICML 2026! 🎉</span>
-  </li>
-</ul>
-
-## Selected Publications
-
-<p class="pub-note">* denotes equal contribution</p>
-
-<div class="pub-entry">
-  <div class="pub-title">Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR</div>
-  <div class="pub-authors"><strong>Chanuk Lee</strong>*, Sangwoo Park*, Minki Kang, Sung Ju Hwang</div>
-  <div class="pub-venue"><span class="venue-badge venue-badge--preprint">arXiv 2026</span></div>
-  <div class="pub-links">
-    <a href="https://arxiv.org/pdf/2605.15726">paper</a>
-    <a href="https://github.com/tally0818/NudgeRL">code</a>
-    <button type="button" class="cite-btn">BibTeX</button>
+<section class="profile-hero" aria-labelledby="profile-name">
+  <div class="hero-copy">
+    <h1 id="profile-name">Chanuk Lee</h1>
+    <div class="hero-bio">
+      <p>Hi, I’m Chanuk, a junior undergraduate at <a href="https://cs.kaist.ac.kr">KAIST</a>, advised by Prof. <a href="http://www.sungjuhwang.com">Sung Ju Hwang</a> at the <a href="https://www.mlai-kaist.com">MLAI Lab</a>.</p>
+      <p>My research focuses on building intelligent systems that make effective use of limited resources. I study how to improve reasoning performance while reducing the computation and supervision required for post-training [<a href="{{ '/publications/' | relative_url }}#paper-sage" aria-label="Publication 1: SAGE">1</a>, <a href="{{ '/publications/' | relative_url }}#paper-nudgerl" aria-label="Publication 2: NudgeRL">2</a>, <a href="{{ '/publications/' | relative_url }}#paper-surprising-success-repeated-failure" aria-label="Publication 3: Surprising Success, Repeated Failure">3</a>], and how models can recognize when their own capabilities are insufficient and selectively leverage external resources at inference time <a href="{{ '/publications/' | relative_url }}#paper-knowing-when-thinking-is-not-enough" aria-label="Publication 4: Knowing When Thinking Is Not Enough">[4]</a>.</p>
+      <p>More broadly, I am interested in learning and inference systems that allocate computation, information, and external resources where they are most useful. This includes efficient post-training, test-time scaling, tool-augmented reasoning, and self-improving agents that learn through interaction.</p>
+    </div>
+    <nav class="contact-links" aria-label="Contact and academic profiles">
+      <a href="mailto:{{ site.author.email }}">Email</a>
+      <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+    </nav>
   </div>
-  <pre class="pub-bibtex" hidden>@article{lee2026nudging,
-  title={Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR},
-  author={Lee, Chanuk and Park, Sangwoo and Kang, Minki and Hwang, Sung Ju},
-  journal={arXiv preprint arXiv:2605.15726},
-  year={2026}
-}</pre>
+  <figure class="hero-portrait">
+    <div class="portrait-frame"><img src="{{ '/images/profile-outdoors.jpeg' | relative_url }}" alt="Chanuk Lee" width="750" height="1000" fetchpriority="high"></div>
+  </figure>
+</section>
+
+<section class="news-strip" aria-labelledby="news-heading">
+  <h2 id="news-heading">News</h2>
+  <ul>
+    <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/pdf/2605.15726">NudgeRL</a> has been accepted to the <strong>MATH-AI@NeurIPS 2026</strong> workshop! <span aria-label="celebration">🎉</span></span></li>
+    <li><time datetime="2026-05">May 2026</time><span><a href="https://arxiv.org/pdf/2605.15726">NudgeRL</a> is now on arXiv.</span></li>
+    <li><time datetime="2026-05">May 2026</time><span><a href="https://arxiv.org/pdf/2605.18864">SAGE</a> has been accepted to <strong>ICML 2026</strong>! <span aria-label="celebration">🎉</span></span></li>
+  </ul>
+</section>
+
+<section class="research-section" aria-labelledby="research-heading">
+  <div class="section-heading"><h2 id="research-heading">Selected publications</h2><a class="text-link" href="{{ '/publications/' | relative_url }}">All publications</a></div>
+  <p class="section-note">* denotes equal contribution · † denotes corresponding authors / equal advising</p>
+  {% assign selected_publications = site.data.publications | where: 'selected', true %}
+  <div class="paper-list">{% for paper in selected_publications %}{% assign selected_number = forloop.index | prepend: 'S' %}{% include editorial-paper.html paper=paper number=selected_number %}{% endfor %}</div>
+</section>
+
+<div class="background-grid">
+  <section aria-labelledby="experience-heading">
+    <div class="section-heading"><h2 id="experience-heading">Experience</h2></div>
+    <div class="background-entry"><p class="entry-date">Oct 2025 — Present</p><h3>KAIST MLAI Lab</h3><p>Undergraduate Research Intern</p></div>
+  </section>
+  <section aria-labelledby="education-heading">
+    <div class="section-heading"><h2 id="education-heading">Education</h2></div>
+    <div class="background-entry"><p class="entry-date">Mar 2022 — Present</p><h3>KAIST</h3><p>B.S. in Computer Science<br>Minor in Mathematics</p><p class="entry-note">Expected graduation 2028. Mandatory military service in the ROK Air Force, 2024–2025.</p></div>
+    <div class="background-entry"><p class="entry-date">Mar 2020 — Feb 2022</p><h3>Hansung Science High School</h3><p>Early graduation (2 years)</p></div>
+  </section>
+  <section aria-labelledby="service-heading">
+    <div class="section-heading"><h2 id="service-heading">Academic Service</h2></div>
+    <div class="service-entry">
+      <h3>Reviewer</h3>
+      <ul>
+        <li>MATH-AI@NeurIPS 2026</li>
+      </ul>
+    </div>
+  </section>
 </div>
-
-<div class="pub-entry">
-  <div class="pub-title">SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs</div>
-  <div class="pub-authors"><strong>Chanuk Lee</strong>, Minki Kang, Sung Ju Hwang</div>
-  <div class="pub-venue"><span class="venue-badge">ICML 2026</span></div>
-  <div class="pub-links">
-    <a href="https://arxiv.org/pdf/2605.18864">paper</a>
-    <a href="https://github.com/tally0818/SAGE">code</a>
-    <button type="button" class="cite-btn">BibTeX</button>
-  </div>
-  <pre class="pub-bibtex" hidden>@article{lee2026sage,
-  title={SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs},
-  author={Lee, Chanuk and Kang, Minki and Hwang, Sung Ju},
-  journal={arXiv preprint arXiv:2605.18864},
-  year={2026}
-}</pre>
-</div>
-
-<p class="more-link"><a href="/publications/">Full publication list →</a></p>
-
-## Experience
-
-<ul class="dated-list dated-list--wide">
-  <li>
-    <span class="date">Oct 2025 – Present</span>
-    <span class="entry"><strong>KAIST MLAI Lab</strong> — Undergraduate Research Intern</span>
-  </li>
-</ul>
-
-## Education
-
-<ul class="dated-list dated-list--wide">
-  <li>
-    <span class="date">Mar 2022 – Present</span>
-    <span class="entry">
-      <strong>KAIST</strong>, School of Computing — B.S. in Computer Science, minor in Mathematics
-      <span class="entry-note">Expected graduation 2028; two years of mandatory military service in the ROK Air Force (2024–2025)</span>
-    </span>
-  </li>
-  <li>
-    <span class="date">Mar 2020 – Feb 2022</span>
-    <span class="entry">
-      <strong>Hansung Science High School</strong>
-      <span class="entry-note">Early graduation (2 years)</span>
-    </span>
-  </li>
-</ul>

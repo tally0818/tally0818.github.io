@@ -1,77 +1,16 @@
 ---
-layout: archive
+layout: editorial
+title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
-
-<h1>Publications</h1>
-
-<p class="pub-note">* denotes equal contribution</p>
-
-<div class="pub-section">
-
-  <h2>Conference Papers</h2>
-
-  <!-- =====================================================
-       논문 추가 방법:
-       아래 블록을 복사해서 붙여넣고 내용을 수정하세요.
-       href="#" 부분에 실제 링크를 넣으면 됩니다.
-       링크가 없으면 해당 <a> 태그를 지우세요.
-       ===================================================== -->
-  <div class="pub-entry">
-    <div class="pub-title">SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs</div>
-    <div class="pub-authors"><strong>Chanuk Lee</strong>, Minki Kang, Sung Ju Hwang</div>
-    <div class="pub-venue"><span class="venue-badge">ICML 2026</span></div>
-    <div class="pub-links">
-      <a href="https://arxiv.org/pdf/2605.18864">paper</a>
-      <a href="https://github.com/tally0818/SAGE">code</a>
-      <button type="button" class="cite-btn">BibTeX</button>
-    </div>
-    <pre class="pub-bibtex" hidden>@article{lee2026sage,
-  title={SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs},
-  author={Lee, Chanuk and Kang, Minki and Hwang, Sung Ju},
-  journal={arXiv preprint arXiv:2605.18864},
-  year={2026}
-}</pre>
+<header class="publications-header">
+  <div class="publications-title-row">
+    <h1 id="publications-heading">Publications</h1>
+    <p class="section-note">* denotes equal contribution · † denotes corresponding authors / equal advising</p>
   </div>
-  <!-- <div class="pub-entry">
-    <div class="pub-title">Paper Title Here</div>
-    <div class="pub-authors">Author One, <strong>Chanuk Lee</strong>, Author Three</div>
-    <div class="pub-venue">Conference Name (CONF), 2026</div>
-    <div class="pub-links">
-      <a href="https://example.com/project">project</a>
-      <a href="https://example.com/paper">paper</a>
-      <a href="https://example.com/code">code</a>
-    </div>
-  </div> -->
-
-  <h2>Preprints</h2>
-
-  <div class="pub-entry">
-    <div class="pub-title">Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR</div>
-    <div class="pub-authors"><strong>Chanuk Lee</strong>*, Sangwoo Park*, Minki Kang, Sung Ju Hwang</div>
-    <div class="pub-venue"><span class="venue-badge venue-badge--preprint">arXiv 2026</span></div>
-    <div class="pub-links">
-      <a href="https://arxiv.org/pdf/2605.15726">paper</a>
-      <a href="https://github.com/tally0818/NudgeRL">code</a>
-      <button type="button" class="cite-btn">BibTeX</button>
-    </div>
-    <pre class="pub-bibtex" hidden>@article{lee2026nudging,
-  title={Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR},
-  author={Lee, Chanuk and Park, Sangwoo and Kang, Minki and Hwang, Sung Ju},
-  journal={arXiv preprint arXiv:2605.15726},
-  year={2026}
-}</pre>
-  </div>
-
-  <!-- <div class="pub-entry">
-    <div class="pub-title">Preprint Title Here</div>
-    <div class="pub-authors">Author One, <strong>Chanuk Lee</strong>, Author Three</div>
-    <div class="pub-venue">arXiv, 2026</div>
-    <div class="pub-links">
-      <a href="#">arXiv</a>
-      <a href="#">code</a>
-    </div>
-  </div> -->
-
-</div>
+  <a class="text-link" href="{{ site.author.googlescholar | escape }}">Google Scholar</a>
+</header>
+<section class="publications-group" aria-labelledby="publications-heading">
+  <div class="paper-list">{% for paper in site.data.publications %}{% include editorial-paper.html paper=paper number=forloop.rindex %}{% endfor %}</div>
+</section>

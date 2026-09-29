@@ -12,10 +12,27 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Apply the saved theme before the first paint. -->
+<script>
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || ((!savedTheme || savedTheme === 'system') && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  } catch (error) { /* Storage may be unavailable in private browsing. */ }
+</script>
+
 <!-- Web fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap" rel="stylesheet">
 
 <!-- For all browsers -->
+{% if page.layout == 'editorial' %}
+<link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
+{% else %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+{% endif %}
